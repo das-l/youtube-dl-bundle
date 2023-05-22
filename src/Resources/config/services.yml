@@ -1,0 +1,19 @@
+services:
+    _defaults:
+        autoconfigure: true
+
+    das_l_youtube_dl:
+        class: YoutubeDl\YoutubeDl
+        arguments:
+            - '@das_l_youtube_dl.process_builder'
+            - '@das_l_youtube_dl.metadata_reader'
+            - '@filesystem'
+        calls:
+            - setBinPath: ['%das_l_youtube_dl.binPath%']
+            - setPythonPath: ['%das_l_youtube_dl.pythonPath%']
+
+    das_l_youtube_dl.process_builder:
+        class: YoutubeDl\Process\DefaultProcessBuilder
+
+    das_l_youtube_dl.metadata_reader:
+        class: YoutubeDl\Metadata\DefaultMetadataReader

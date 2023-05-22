@@ -1,0 +1,31 @@
+{
+    "name": "das-l/youtube-dl-bundle",
+    "type": "symfony-bundle",
+    "description": "Symfony bundle that provides service injection and config for norkunas/youtube-dl-php",
+    "keywords": ["youtube", "youtube-dl", "yt-dlp"],
+    "homepage": "https://github.com/das-l/youtube-dl-bundle",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Alex Wuttke",
+            "homepage": "https://das-l.de",
+            "email": "alex@das-l.de"
+        }
+    ],
+    "require": {
+        "php": "^7.4 || ^8.0",
+        "symfony/config": "^4.4 || ^5.1",
+        "symfony/dependency-injection": "^4.4 || ^5.1",
+        "symfony/http-kernel": "^4.4 || ^5.1",
+        "norkunas/youtube-dl-php": "^2.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "DasL\\YoutubeDlBundle\\": "src/"
+        }
+    },
+    "support": {
+        "issues": "https://github.com/das-l/youtube-dl-bundle/issues",
+        "source": "https://github.com/das-l/youtube-dl-bundle"
+    }
+}
